@@ -18,7 +18,7 @@
         android:layout_below="@+id/edtEmail"
         android:layout_centerHorizontal="true"
         android:id="@+id/edtPassword"
-        android:hint="password" />
+        android:hint="PASSWORD" />
 
     <TextView
         android:text="Ainda não possui uma conta?"
@@ -54,8 +54,8 @@
         android:id="@+id/edtEmail"
         android:layout_height="wrap_content"
         android:layout_width="300dp"
-        android:layout_marginTop="138dp"
+        android:layout_marginTop="132dp"
         android:hint="E-MAIL"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/edtPassword" />
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
