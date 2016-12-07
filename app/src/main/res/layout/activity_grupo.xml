@@ -2,40 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_novo_grupo"
+    android:id="@+id/activity_grupo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.diego.provapooa20162.NovoGrupo">
+    tools:context="com.example.diego.provapooa20162.Grupo">
 
-    <EditText
-        android:layout_width="300dp"
+    <TextView
+        android:text="Nome_do_grupo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/edtDescricao"
-        android:lines="5"
-        android:hint="DESCRIÇÃO"
-        android:layout_below="@+id/edtNomeGrupo"
-        android:layout_alignParentStart="true"
-        android:maxLines="5"
-        android:minLines="5" />
-
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/edtNomeGrupo"
-        android:layout_marginTop="113dp"
-        android:hint="NOME DO GRUPO"
-        android:lines="1"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:maxLines="1" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -48,9 +31,16 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ok_icon"
-        android:layout_alignTop="@+id/btnVoltar"
+        app:srcCompat="@drawable/plus_icon"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/btnOk" />
+        android:id="@+id/btnNovaTarefa" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/people_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnPessoas" />
 </RelativeLayout>

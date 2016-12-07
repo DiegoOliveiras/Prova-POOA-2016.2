@@ -40,7 +40,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <Button
-        android:text="CONECTAR"
+        android:text="CONECTAR-SE"
         android:layout_width="300dp"
         android:id="@+id/btnConectar"
         android:layout_height="60dp"
