@@ -20,15 +20,6 @@
         android:id="@+id/edtPassword"
         android:hint="PASSWORD" />
 
-    <TextView
-        android:text="Ainda não possui uma conta?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="121dp"
-        android:id="@+id/textView" />
-
     <Button
         android:text="REGISTRAR-SE"
         android:layout_width="300dp"
@@ -48,14 +39,23 @@
         android:layout_below="@+id/edtPassword"
         android:layout_alignStart="@+id/edtPassword" />
 
+    <TextView
+        android:text="Ainda não possui uma conta?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_below="@+id/btnConectar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp" />
+
     <EditText
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/edtEmail"
         android:layout_height="wrap_content"
         android:layout_width="300dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="108dp"
         android:hint="E-MAIL"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignStart="@+id/edtPassword" />
 </RelativeLayout>
