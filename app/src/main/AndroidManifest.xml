@@ -21,8 +21,7 @@
         <activity android:name=".Grupo" />
         <activity android:name=".Tarefa" />
         <activity android:name=".NovaTarefa" />
-        <activity android:name=".Participantes" />
-        <activity android:name=".FlaticonCredits"></activity>
+        <activity android:name=".Participantes"></activity>
     </application>
 
 </manifest>

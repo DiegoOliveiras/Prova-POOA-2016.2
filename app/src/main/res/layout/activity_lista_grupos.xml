@@ -11,20 +11,28 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.diego.provapooa20162.ListaGrupos">
 
-    <ImageButton
-        app:srcCompat="@drawable/plus"
-        android:id="@+id/btnNovoGrupo"
-        android:layout_height="60dp"
-        android:layout_width="56dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:text="Olá, USER, pronto para desenvolver hoje?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/plus_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btnNovoGrupo" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/back_icon"
+        android:layout_alignTop="@+id/btnNovoGrupo"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnVoltar" />
 
 </RelativeLayout>
