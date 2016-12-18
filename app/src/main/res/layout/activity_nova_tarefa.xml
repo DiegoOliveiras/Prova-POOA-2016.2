@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.diego.provapooa20162.NovaTarefa">
+    tools:context="com.example.diego.provapooa20162.ActivityNovaTarefa">
 
     <EditText
         android:layout_width="300dp"
@@ -21,15 +21,6 @@
         android:hint="TÍTULO"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/edtDesc" />
-
-    <ImageButton
-        android:layout_width="56dp"
-        android:layout_height="60dp"
-        app:srcCompat="@drawable/success"
-        android:id="@+id/btnOk"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:elevation="0dp" />
 
     <EditText
         android:layout_width="300dp"
@@ -43,5 +34,15 @@
         android:hint="DESCRIÇÃO"
         android:layout_below="@+id/edtNome"
         android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/success"
+        android:id="@+id/btnOk"
+        android:elevation="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop" />
 
 </RelativeLayout>

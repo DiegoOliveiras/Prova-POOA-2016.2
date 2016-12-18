@@ -1,17 +1,14 @@
 package com.example.diego.provapooa20162;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityLogin extends AppCompatActivity {
 
     private EditText edtEmail, edtSenha;
     private Button btnConectar, btnNovaConta;
@@ -26,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btnConectar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, ListaGrupos.class);
+                Intent it = new Intent(ActivityLogin.this, ActivityListaGrupos.class);
                 startActivity(it);
             }
         });
@@ -35,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnNovaConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, NovaConta.class);
+                Intent it = new Intent(ActivityLogin.this, ActivityNovaConta.class);
                 startActivity(it);
             }
         });
@@ -44,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         flaticonLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, FlaticonCredits.class);
+                Intent it = new Intent(ActivityLogin.this, ActivityFlaticonCredits.class);
                 startActivity(it);
             }
         });
