@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,27 +9,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.diego.provapooa20162.MainActivity">
+    tools:context="com.example.diego.provapooa20162.ActivityLogin">
+
+    <TextView
+        android:text="Ainda não possui uma conta?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/btnNovaConta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_below="@+id/edtEmail"
-        android:layout_centerHorizontal="true"
         android:id="@+id/edtPassword"
-        android:hint="PASSWORD" />
-
-    <Button
-        android:text="REGISTRAR-SE"
-        android:layout_width="300dp"
-        android:layout_alignTop="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:id="@+id/button2"
-        android:layout_height="40dp"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+        android:hint="PASSWORD"
+        android:layout_below="@+id/edtEmail"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="CONECTAR-SE"
@@ -39,14 +39,25 @@
         android:layout_below="@+id/edtPassword"
         android:layout_alignStart="@+id/edtPassword" />
 
-    <TextView
-        android:text="Ainda não possui uma conta?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_below="@+id/btnConectar"
+    <Button
+        android:text="REGISTRAR-SE"
+        android:layout_width="300dp"
+        android:id="@+id/btnNovaConta"
+        android:layout_height="40dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnConectar"
+        android:layout_marginBottom="31dp" />
+
+    <ImageView
+        app:srcCompat="@drawable/flaticon"
+        android:id="@+id/flaticonLogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:clickable="true"
+        android:layout_above="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp" />
+        android:layout_marginBottom="42dp" />
 
     <EditText
         android:inputType="textEmailAddress"
@@ -54,7 +65,7 @@
         android:id="@+id/edtEmail"
         android:layout_height="wrap_content"
         android:layout_width="300dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="76dp"
         android:hint="E-MAIL"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/edtPassword" />

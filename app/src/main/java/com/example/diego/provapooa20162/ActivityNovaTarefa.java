@@ -1,9 +1,10 @@
 package com.example.diego.provapooa20162;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class NovaTarefa extends AppCompatActivity {
+public class ActivityNovaTarefa extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

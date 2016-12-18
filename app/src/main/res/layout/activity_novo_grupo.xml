@@ -9,7 +9,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.diego.provapooa20162.NovoGrupo">
+    tools:context="com.example.diego.provapooa20162.ActivityNovoGrupo">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        app:srcCompat="@android:drawable/editbox_dropdown_dark_frame"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        app:srcCompat="@drawable/success"
+        android:id="@+id/btnOk"
+        android:layout_width="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop" />
 
     <EditText
         android:layout_width="300dp"
@@ -19,10 +38,10 @@
         android:id="@+id/edtDescricao"
         android:lines="5"
         android:hint="DESCRIÇÃO"
-        android:layout_below="@+id/edtNomeGrupo"
-        android:layout_alignParentStart="true"
         android:maxLines="5"
-        android:minLines="5" />
+        android:minLines="5"
+        android:layout_below="@+id/edtNomeGrupo"
+        android:layout_alignStart="@+id/edtNomeGrupo" />
 
     <EditText
         android:layout_width="300dp"
@@ -30,27 +49,11 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/edtNomeGrupo"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="74dp"
         android:hint="NOME DO GRUPO"
         android:lines="1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:maxLines="1" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/back_icon"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/btnVoltar" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ok_icon"
-        android:layout_alignTop="@+id/btnVoltar"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/btnOk" />
+        android:maxLines="1"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -9,64 +9,75 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.diego.provapooa20162.NovaConta">
+    tools:context="com.example.diego.provapooa20162.ActivityNovaConta">
+
+    <ImageView
+        android:layout_width="match_parent"
+        app:srcCompat="@android:drawable/editbox_dropdown_dark_frame"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        android:layout_height="423dp" />
 
     <EditText
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_below="@+id/edtSenha"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/edtSenha2"
-        android:hint="REPITA A SENHA"
-        android:layout_width="300dp" />
-
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/edtEmail"
-        android:hint="E-MAIL"
-        android:layout_below="@+id/edtNome"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/edtSenha"
         android:hint="SENHA"
         android:layout_below="@+id/edtEmail"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp" />
 
     <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edtSenha2"
+        android:hint="REPITA A SENHA"
+        android:layout_below="@+id/edtSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp" />
+
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/success"
+        android:id="@+id/btnOk"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/edtEmail"
+        android:hint="E-MAIL"
         android:layout_width="300dp"
+        android:layout_below="@+id/edtNome"
+        android:layout_alignStart="@+id/edtNome" />
+
+    <EditText
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_marginTop="98dp"
         android:id="@+id/edtNome"
         android:hint="NOME"
+        android:layout_width="300dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/edtSenha" />
 
-    <ImageButton
+    <TextView
+        android:text="Preencha os campos abaixo para criar a sua conta!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/back_icon"
-        android:id="@+id/btnVoltar"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ok_icon"
-        android:layout_alignTop="@+id/btnVoltar"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/btnOk" />
+        android:id="@+id/textView5"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

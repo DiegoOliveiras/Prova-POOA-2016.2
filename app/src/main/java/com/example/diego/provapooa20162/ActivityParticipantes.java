@@ -3,11 +3,11 @@ package com.example.diego.provapooa20162;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ListaGrupos extends AppCompatActivity {
+public class ActivityParticipantes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_grupos);
+        setContentView(R.layout.activity_participantes);
     }
 }
