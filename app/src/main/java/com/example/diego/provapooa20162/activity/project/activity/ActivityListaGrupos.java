@@ -37,7 +37,7 @@ public class ActivityListaGrupos extends AppCompatActivity {
         p = Pessoa.findById(Pessoa.class, idp);
 
         txtUsuario = (TextView) findViewById(R.id.txtUsuario);
-        txtUsuario.setText("Logado como: "+p.getNome());
+        txtUsuario.setText("Seja bem-vindo, "+p.getNome()+"!");
 
         btnNovoGrupo = (ImageButton) findViewById(R.id.btnNovoGrupo);
         btnNovoGrupo.setOnClickListener(new View.OnClickListener() {

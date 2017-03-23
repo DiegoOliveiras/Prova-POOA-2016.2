@@ -70,8 +70,21 @@ public class ActivityNovoGrupo extends AppCompatActivity {
     }
 
     public void onBackPressed() {
-        Intent it = new Intent(ActivityNovoGrupo.this, ActivityListaGrupos.class);
-        startActivity(it);
-        finish();
+        AlertDialog.Builder builder = new AlertDialog.Builder(ActivityNovoGrupo.this);
+        builder.setMessage("Cancelar a criação de novo grupo?")
+                .setCancelable(false)
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){
+                        Intent it = new Intent(ActivityNovoGrupo.this, ActivityListaGrupos.class);
+                        it.putExtra("id",p.getId().toString());
+                        startActivity(it);
+                        finish();
+                    }
+                })
+                .setNegativeButton("Não", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){}
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

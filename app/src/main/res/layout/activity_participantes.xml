@@ -22,8 +22,8 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:id="@+id/@android:id/list"
-        android:layout_below="@+id/textView7"
+        android:id="@+id/lista_participantes"
+        android:layout_below="@+id/txtNomeGrupo"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
         android:background="@android:drawable/editbox_dropdown_dark_frame"
@@ -33,7 +33,7 @@
         android:text="Nome_do_Grupo - Participantes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView7"
+        android:id="@+id/txtNomeGrupo"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />

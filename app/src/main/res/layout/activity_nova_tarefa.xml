@@ -45,4 +45,14 @@
         android:layout_alignParentEnd="true"
         android:scaleType="centerCrop" />
 
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/edtDesc"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edtPrazo"
+        android:hint="PRAZO (dd/mm/aaaa)" />
+
 </RelativeLayout>

@@ -4,13 +4,21 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.diego.provapooa20162.R;
+import com.example.diego.provapooa20162.activity.project.adapter.GrupoAdapter;
+import com.example.diego.provapooa20162.activity.project.adapter.TarefaAdapter;
 import com.example.diego.provapooa20162.activity.project.model.Grupo;
+import com.example.diego.provapooa20162.activity.project.model.Tarefa;
 
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class ActivityGrupo extends AppCompatActivity {
 
@@ -42,7 +50,9 @@ public class ActivityGrupo extends AppCompatActivity {
         btnNovaTarefa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(ActivityGrupo.this, ActivityTarefa.class);
+                Intent it = new Intent(ActivityGrupo.this, ActivityNovaTarefa.class);
+                it.putExtra("idg", g.getId().toString());
+                it.putExtra("idp", idp);
                 startActivity(it);
                 finish();
             }
@@ -53,10 +63,31 @@ public class ActivityGrupo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(ActivityGrupo.this, ActivityParticipantes.class);
+                it.putExtra("idg",g.getId().toString());
+                it.putExtra("idp",idp);
                 startActivity(it);
                 finish();
             }
         });
+
+        ListView lista = (ListView) findViewById(R.id.lista_tarefas);
+        final ArrayList<Tarefa> tarefas;
+        tarefas = (ArrayList<Tarefa>) Tarefa.find(Tarefa.class, "grupo = ?", g.getId().toString());
+        ArrayAdapter adapter = new TarefaAdapter(this, tarefas);
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ActivityGrupo.this, ActivityTarefa.class);
+                intent.putExtra("idt",tarefas.get(i).getId().toString());
+                intent.putExtra("idg",g.getId().toString());
+
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        lista.setAdapter(adapter);
     }
 
     public void onBackPressed() {

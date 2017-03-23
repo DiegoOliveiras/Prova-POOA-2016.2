@@ -82,8 +82,21 @@ public class ActivityNovaConta extends AppCompatActivity {
     }
 
     public void onBackPressed() {
-        Intent it = new Intent(ActivityNovaConta.this, ActivityLogin.class);
-        startActivity(it);
-        finish();
+        AlertDialog.Builder builder = new AlertDialog.Builder(ActivityNovaConta.this);
+        builder.setMessage("Cancelar a criação de nova conta?")
+                .setCancelable(false)
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){
+                        Intent it = new Intent(ActivityNovaConta.this, ActivityLogin.class);
+                        startActivity(it);
+                        finish();
+                        finish();
+                    }
+                })
+                .setNegativeButton("Não", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){}
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
