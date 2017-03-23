@@ -3,26 +3,27 @@
     package="com.example.diego.provapooa20162">
 
     <application
+        android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityLogin">
+        <activity android:name=".activity.project.activity.ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityListaGrupos" />
-        <activity android:name=".ActivityNovoGrupo" />
-        <activity android:name=".ActivityNovaConta" />
-        <activity android:name=".ActivityGrupo" />
-        <activity android:name=".ActivityTarefa" />
-        <activity android:name=".ActivityNovaTarefa" />
-        <activity android:name=".ActivityParticipantes" />
-        <activity android:name=".ActivityFlaticonCredits"></activity>
+        <activity android:name=".activity.project.activity.ActivityListaGrupos" />
+        <activity android:name=".activity.project.activity.ActivityNovoGrupo" />
+        <activity android:name=".activity.project.activity.ActivityNovaConta" />
+        <activity android:name=".activity.project.activity.ActivityGrupo" />
+        <activity android:name=".activity.project.activity.ActivityTarefa" />
+        <activity android:name=".activity.project.activity.ActivityNovaTarefa" />
+        <activity android:name=".activity.project.activity.ActivityParticipantes" />
+        <activity android:name=".activity.project.activity.ActivityFlaticonCredits"></activity>
     </application>
 
 </manifest>

@@ -1,7 +1,9 @@
-package com.example.diego.provapooa20162;
+package com.example.diego.provapooa20162.activity.project.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.diego.provapooa20162.R;
 
 public class ActivityParticipantes extends AppCompatActivity {
 

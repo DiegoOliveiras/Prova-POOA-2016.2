@@ -1,4 +1,4 @@
-package com.example.diego.provapooa20162;
+package com.example.diego.provapooa20162.activity.project.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.diego.provapooa20162.R;
 
 public class ActivityFlaticonCredits extends AppCompatActivity implements View.OnClickListener{
 

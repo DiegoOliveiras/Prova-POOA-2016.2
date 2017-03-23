@@ -1,12 +1,12 @@
-package com.example.diego.provapooa20162;
+package com.example.diego.provapooa20162.activity.project.activity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.example.diego.provapooa20162.R;
 
 public class ActivityGrupo extends AppCompatActivity {
 
