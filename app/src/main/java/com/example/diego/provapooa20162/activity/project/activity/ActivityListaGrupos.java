@@ -6,11 +6,18 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.diego.provapooa20162.R;
+import com.example.diego.provapooa20162.activity.project.adapter.GrupoAdapter;
+import com.example.diego.provapooa20162.activity.project.model.Grupo;
 import com.example.diego.provapooa20162.activity.project.model.Pessoa;
+
+import java.util.ArrayList;
 
 public class ActivityListaGrupos extends AppCompatActivity {
 
@@ -37,6 +44,7 @@ public class ActivityListaGrupos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(ActivityListaGrupos.this, ActivityNovoGrupo.class);
+                it.putExtra("id", p.getId().toString());
                 startActivity(it);
                 finish();
             }
@@ -49,6 +57,26 @@ public class ActivityListaGrupos extends AppCompatActivity {
                 sair();
             }
         });
+
+        ListView lista = (ListView) findViewById(R.id.lista_grupos);
+        final ArrayList<Grupo> grupos;
+        grupos = (ArrayList<Grupo>) Grupo.find(Grupo.class, "gerente = ?", p.getId().toString());
+        //grupos = p.getGrupos();
+        ArrayAdapter adapter = new GrupoAdapter(this, grupos);
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ActivityListaGrupos.this, ActivityGrupo.class);
+                intent.putExtra("idg",grupos.get(i).getId().toString());
+                intent.putExtra("idp",p.getId().toString());
+
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        lista.setAdapter(adapter);
     }
 
     public void onBackPressed() {

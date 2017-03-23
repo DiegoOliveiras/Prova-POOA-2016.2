@@ -20,20 +20,11 @@
         android:layout_alignParentEnd="true"
         android:scaleType="centerCrop" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="417dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/@android:id/list"
-        android:background="@android:drawable/editbox_dropdown_dark_frame" />
-
     <TextView
         android:text="Nome_do_grupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
+        android:id="@+id/txtNomeGrupo"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -46,4 +37,24 @@
         android:scaleType="centerCrop"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNomeGrupo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/txtDescricao"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:lines="3" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="417dp"
+        android:id="@+id/lista_tarefas"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:layout_below="@+id/txtDescricao"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btnNovaTarefa" />
 </RelativeLayout>

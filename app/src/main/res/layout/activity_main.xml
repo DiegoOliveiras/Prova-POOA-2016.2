@@ -28,7 +28,8 @@
         android:id="@+id/edtPassword"
         android:hint="PASSWORD"
         android:layout_below="@+id/edtEmail"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="teste" />
 
     <Button
         android:text="CONECTAR-SE"
@@ -68,5 +69,6 @@
         android:layout_marginTop="76dp"
         android:hint="E-MAIL"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/edtPassword" />
+        android:layout_alignStart="@+id/edtPassword"
+        android:text="teste" />
 </RelativeLayout>

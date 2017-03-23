@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.example.diego.provapooa20162.R;
 import com.example.diego.provapooa20162.activity.project.model.Pessoa;
 
+import java.util.List;
+
 public class ActivityNovaConta extends AppCompatActivity {
     private EditText edtNome, edtSenha, edtSenha2, edtEmail;
     private ImageButton btnOk;
@@ -36,17 +38,30 @@ public class ActivityNovaConta extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("Sim", new DialogInterface.OnClickListener(){
                             public void onClick(DialogInterface dialog, int id){
+                                String email = edtEmail.getText().toString();
                                 if (!edtNome.getText().toString().isEmpty() && !edtEmail.getText().toString().isEmpty() && !edtSenha.getText().toString().isEmpty()){
                                     if (edtSenha.getText().toString().equals(edtSenha2.getText().toString())){
-                                        Pessoa p = new Pessoa(edtNome.getText().toString(),
-                                                edtEmail.getText().toString(),
-                                                edtSenha.getText().toString()
-                                        );
-                                        p.save();
-                                        Toast.makeText(getApplicationContext(), "Conta criada com sucesso!", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(ActivityNovaConta.this, ActivityLogin.class);
-                                        startActivity(intent);
-                                        finish();
+                                        List<Pessoa> query = Pessoa.find(Pessoa.class, "email = ?", email);
+                                        Boolean existe=false;
+                                        for (int i=0; i<query.size(); i++){
+                                            if (query.get(i).getEmail().equals(email)){
+                                                existe=true;
+                                            }
+                                        }
+                                        if (existe){
+                                            Toast.makeText(getApplicationContext(), "E-mail já cadastrado!", Toast.LENGTH_SHORT).show();
+                                        }
+                                        else{
+                                            Pessoa p = new Pessoa(edtNome.getText().toString(),
+                                                    edtEmail.getText().toString(),
+                                                    edtSenha.getText().toString()
+                                            );
+                                            p.save();
+                                            Toast.makeText(getApplicationContext(), "Conta criada com sucesso!", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(ActivityNovaConta.this, ActivityLogin.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
                                     }
                                     else {
                                         Toast.makeText(getApplicationContext(), "As senhas digitadas não conferem!", Toast.LENGTH_SHORT).show();

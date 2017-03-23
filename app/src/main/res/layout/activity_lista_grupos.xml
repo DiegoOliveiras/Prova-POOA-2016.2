@@ -29,19 +29,6 @@
         android:id="@+id/txtUsuario"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:id="@+id/@android:id/list"
-        android:background="@android:drawable/editbox_dropdown_dark_frame"
-        android:layout_marginTop="22dp"
-        android:headerDividersEnabled="false"
-        android:footerDividersEnabled="false"
-        android:layout_below="@+id/txtUsuario"
-        android:layout_alignParentStart="true"
-        android:clickable="true"
-        tools:clickable="true"
-        android:layout_height="417dp" />
-
     <ImageButton
         android:layout_width="56dp"
         android:layout_height="60dp"
@@ -50,5 +37,18 @@
         android:layout_alignParentStart="true"
         android:id="@+id/btnSair"
         android:scaleType="centerCrop" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/lista_grupos"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:clickable="true"
+        tools:clickable="true"
+        android:layout_height="417dp"
+        android:layout_above="@+id/btnNovoGrupo"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>

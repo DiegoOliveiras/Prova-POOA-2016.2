@@ -3,6 +3,8 @@ package com.example.diego.provapooa20162.activity.project.model;
 
 import com.orm.SugarRecord;
 
+import java.util.ArrayList;
+
 /**
  * Created by Diego on 23/03/2017.
  */
@@ -12,6 +14,7 @@ public class Pessoa extends SugarRecord {
 
     private String nome, email, senha;
     private int pontos=0;
+    private ArrayList<Grupo> grupos = new ArrayList<Grupo>();
 
     public Pessoa(){}
 
@@ -19,6 +22,14 @@ public class Pessoa extends SugarRecord {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+    }
+
+    public void addGrupo(Grupo grupo){
+        grupos.add(grupo);
+    }
+
+    public void removeGrupo(Grupo grupo){
+        grupos.remove(grupo);
     }
 
     public String getNome() {
@@ -51,5 +62,9 @@ public class Pessoa extends SugarRecord {
 
     public void setPontos(int pontos) {
         this.pontos = pontos;
+    }
+
+    public ArrayList<Grupo> getGrupos() {
+        return grupos;
     }
 }

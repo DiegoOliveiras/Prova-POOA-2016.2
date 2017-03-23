@@ -14,16 +14,26 @@ public class Tarefa extends SugarRecord {
     private Long id;
 
     private String titulo, descricao, dataInicio, prazo, dataTermino, observacao;
+    private Grupo grupo;
     private int pontos=0, status=0;
 
     public Tarefa(){}
 
-    public Tarefa (String titulo, String descricao, String prazo){
+    public Tarefa (String titulo, String descricao, String prazo, Grupo grupo){
         this.titulo = titulo;
         this.descricao = descricao;
         this.prazo = prazo;
+        this.grupo = grupo;
 
         dataInicio = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+    }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
     }
 
     public String getTitulo() {

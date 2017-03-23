@@ -3,6 +3,8 @@ package com.example.diego.provapooa20162.activity.project.model;
 
 import com.orm.SugarRecord;
 
+import java.util.List;
+
 /**
  * Created by Diego on 23/03/2017.
  */
@@ -12,7 +14,6 @@ public class Grupo extends SugarRecord {
 
     private String nome, descricao;
     private Pessoa gerente;
-    private Pessoa[] membros;
     private int pontos=0;
 
     public Grupo(){}
@@ -21,6 +22,10 @@ public class Grupo extends SugarRecord {
         this.nome = nome;
         this.descricao = descricao;
         this.gerente = gerente;
+    }
+
+    public List<Tarefa> getTarefas(){
+        return Tarefa.find(Tarefa.class, "grupo = ?", String.valueOf(this.getId()));
     }
 
     public int getPontos() {
@@ -55,12 +60,5 @@ public class Grupo extends SugarRecord {
         this.gerente = gerente;
     }
 
-    public Pessoa[] getMembros() {
-        return membros;
-    }
-
-    public void setMembros(Pessoa[] membros) {
-        this.membros = membros;
-    }
 }
 
