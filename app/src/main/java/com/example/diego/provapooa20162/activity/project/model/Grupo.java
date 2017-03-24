@@ -16,7 +16,6 @@ public class Grupo extends SugarRecord {
     private String nome, descricao;
     private Pessoa gerente;
     private Pessoa p1, p2, p3;
-    private int pontos=0;
 
     public Grupo(){}
 
@@ -111,14 +110,6 @@ public class Grupo extends SugarRecord {
 
     public List<Tarefa> getTarefas(){
         return Tarefa.find(Tarefa.class, "grupo = ?", String.valueOf(this.getId()));
-    }
-
-    public int getPontos() {
-        return pontos;
-    }
-
-    public void setPontos(int pontos) {
-        this.pontos = pontos;
     }
 
     public String getNome() {

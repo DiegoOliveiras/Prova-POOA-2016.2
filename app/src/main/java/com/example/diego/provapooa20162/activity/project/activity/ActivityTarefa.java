@@ -55,7 +55,7 @@ public class ActivityTarefa extends AppCompatActivity {
         txtPrazo = (TextView) findViewById(R.id.txtPrazo);
         txtPrazo.setText("Prazo: "+t.getPrazo());
         txtDataInicio = (TextView) findViewById(R.id.txtDataInicio);
-        txtDataInicio.setText("Data Início: "+t.getPrazo());
+        txtDataInicio.setText("Data Início: "+t.getDataInicio());
         txtPontos = (TextView) findViewById(R.id.txtPontos);
         txtPontos.setText("Pontos: "+t.getPontos());
 
@@ -64,18 +64,6 @@ public class ActivityTarefa extends AppCompatActivity {
         txtUsuario = (TextView) findViewById(R.id.txtUsuario);
 
         edtObservacoes = (EditText) findViewById(R.id.edtObservacoes);
-
-        if (t.getStatus() == 0){
-            txtDataTermino.setVisibility(View.INVISIBLE);
-            txtUsuario.setVisibility(View.INVISIBLE);
-            edtObservacoes.setVisibility(View.INVISIBLE);
-        }
-        else {
-            txtDataTermino.setText("Conluído em: "+t.getDataTermino());
-            txtUsuario.setText("Conclúido por: "+t.getPessoa().getNome());
-            edtObservacoes.setText(t.getObservacao());
-            edtObservacoes.setEnabled(false);
-        }
 
         btnApagar = (ImageButton) findViewById(R.id.btnApagar);
         btnApagar.setOnClickListener(new View.OnClickListener() {
@@ -162,6 +150,19 @@ public class ActivityTarefa extends AppCompatActivity {
                 }
             }
         });
+
+        if (t.getStatus() == 0){
+            txtDataTermino.setVisibility(View.INVISIBLE);
+            txtUsuario.setVisibility(View.INVISIBLE);
+            edtObservacoes.setVisibility(View.INVISIBLE);
+        }
+        else {
+            txtDataTermino.setText("Conluído em: "+t.getDataTermino());
+            txtUsuario.setText("Concluído por: "+t.getPessoa().getNome());
+            edtObservacoes.setText(t.getObservacao());
+            edtObservacoes.setEnabled(false);
+            btnConcluir.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void onBackPressed() {
