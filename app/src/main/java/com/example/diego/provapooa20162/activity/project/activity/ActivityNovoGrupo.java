@@ -47,8 +47,6 @@ public class ActivityNovoGrupo extends AppCompatActivity {
                                 if (!edtNomeGrupo.getText().toString().isEmpty() && !edtDescricao.getText().toString().isEmpty()){
                                     Grupo g = new Grupo(edtNomeGrupo.getText().toString(), edtDescricao.getText().toString(), p);
                                     g.save();
-                                    p.addGrupo(g);
-                                    p.save();
                                     Toast.makeText(getApplicationContext(), "Grupo criado com sucesso!", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(ActivityNovoGrupo.this, ActivityListaGrupos.class);
                                     intent.putExtra("id", p.getId().toString());

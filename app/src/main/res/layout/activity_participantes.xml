@@ -11,15 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.diego.provapooa20162.activity.project.activity.ActivityParticipantes">
 
-    <ImageButton
-        android:layout_width="56dp"
-        app:srcCompat="@drawable/plus"
-        android:id="@+id/btnAddPessoa"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:scaleType="centerCrop" />
-
     <ListView
         android:layout_width="match_parent"
         android:id="@+id/lista_participantes"
@@ -37,5 +28,14 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="56dp"
+        app:srcCompat="@drawable/plus"
+        android:id="@+id/btnAddPessoa"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

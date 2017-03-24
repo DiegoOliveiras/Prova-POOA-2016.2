@@ -33,7 +33,7 @@ public class GrupoAdapter extends ArrayAdapter<Grupo> {
         TextView nomegrupo = (TextView) rowView.findViewById(R.id.nomegrupo);
         TextView tarefas = (TextView) rowView.findViewById(R.id.tarefas);
         nomegrupo.setText(list.get(position).getNome());
-        tarefas.setText("Tarefas em Aberto: "+list.get(position).getTarefas().size());
+        tarefas.setText("Tarefas existentes: "+list.get(position).getTarefas().size());
         return rowView;
     }
 }

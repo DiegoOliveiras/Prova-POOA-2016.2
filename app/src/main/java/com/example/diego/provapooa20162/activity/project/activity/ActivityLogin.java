@@ -1,6 +1,8 @@
 package com.example.diego.provapooa20162.activity.project.activity;
 
+        import android.content.DialogInterface;
         import android.content.Intent;
+        import android.support.v7.app.AlertDialog;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
@@ -76,5 +78,21 @@ public class ActivityLogin extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(ActivityLogin.this);
+        builder.setMessage("Deseja sair?")
+                .setCancelable(false)
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){
+                        finish();
+                    }
+                })
+                .setNegativeButton("Não", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){}
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

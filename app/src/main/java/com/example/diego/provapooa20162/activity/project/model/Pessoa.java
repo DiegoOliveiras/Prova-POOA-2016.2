@@ -14,7 +14,6 @@ public class Pessoa extends SugarRecord {
 
     private String nome, email, senha;
     private int pontos=0;
-    private ArrayList<Grupo> grupos = new ArrayList<Grupo>();
 
     public Pessoa(){}
 
@@ -24,12 +23,8 @@ public class Pessoa extends SugarRecord {
         this.senha = senha;
     }
 
-    public void addGrupo(Grupo grupo){
-        grupos.add(grupo);
-    }
-
-    public void removeGrupo(Grupo grupo){
-        grupos.remove(grupo);
+    public void addPontos(int pontos){
+        this.pontos += pontos;
     }
 
     public String getNome() {
@@ -64,7 +59,4 @@ public class Pessoa extends SugarRecord {
         this.pontos = pontos;
     }
 
-    public ArrayList<Grupo> getGrupos() {
-        return grupos;
-    }
 }

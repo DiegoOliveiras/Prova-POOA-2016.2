@@ -5,6 +5,7 @@ import com.orm.SugarRecord;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * Created by Diego on 23/03/2017.
@@ -15,7 +16,8 @@ public class Tarefa extends SugarRecord {
 
     private String titulo, descricao, dataInicio, prazo, dataTermino, observacao;
     private Grupo grupo;
-    private int pontos=0, status=0;
+    private Pessoa pessoa;
+    private int pontos, status;
 
     public Tarefa(){}
 
@@ -25,7 +27,25 @@ public class Tarefa extends SugarRecord {
         this.prazo = prazo;
         this.grupo = grupo;
 
-        dataInicio = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+        dataInicio = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
+        Random rand = new Random();
+        pontos = rand.nextInt(100)+1;
+        status=0;
+    }
+
+    public void concluirTarefa(Pessoa p, String observacao){
+        pessoa = p;
+        this.observacao = observacao;
+        dataTermino = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
+        status=1;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     public Grupo getGrupo() {

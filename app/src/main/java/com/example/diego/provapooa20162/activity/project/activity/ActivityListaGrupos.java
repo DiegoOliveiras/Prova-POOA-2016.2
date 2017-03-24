@@ -61,7 +61,10 @@ public class ActivityListaGrupos extends AppCompatActivity {
         ListView lista = (ListView) findViewById(R.id.lista_grupos);
         final ArrayList<Grupo> grupos;
         grupos = (ArrayList<Grupo>) Grupo.find(Grupo.class, "gerente = ?", p.getId().toString());
-        //grupos = p.getGrupos();
+        grupos.addAll(Grupo.find(Grupo.class, "p1 = ?", p.getId().toString()));
+        grupos.addAll(Grupo.find(Grupo.class, "p2 = ?", p.getId().toString()));
+        grupos.addAll(Grupo.find(Grupo.class, "p3 = ?", p.getId().toString()));
+
         ArrayAdapter adapter = new GrupoAdapter(this, grupos);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {

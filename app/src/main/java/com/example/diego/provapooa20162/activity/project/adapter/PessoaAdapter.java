@@ -31,8 +31,10 @@ public class PessoaAdapter extends ArrayAdapter<Pessoa>{
         View rowView = inflater.inflate(R.layout.linha_pessoa, parent, false);
         TextView txtNome = (TextView) rowView.findViewById(R.id.txtNome);
         TextView txtEmail = (TextView) rowView.findViewById(R.id.txtEmail);
+        TextView txtPontos = (TextView) rowView.findViewById(R.id.txtPontos);
         txtNome.setText(list.get(position).getNome());
         txtEmail.setText(list.get(position).getEmail());
+        txtPontos.setText("Pontuação Geral Individual: "+list.get(position).getPontos());
         return rowView;
     }
 }

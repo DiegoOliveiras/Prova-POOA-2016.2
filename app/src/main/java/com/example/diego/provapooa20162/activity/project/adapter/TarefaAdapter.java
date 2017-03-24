@@ -32,8 +32,16 @@ public class TarefaAdapter extends ArrayAdapter<Tarefa> {
         View rowView = inflater.inflate(R.layout.linha_tarefa, parent, false);
         TextView txtNome = (TextView) rowView.findViewById(R.id.txtNome);
         TextView txtPrazo = (TextView) rowView.findViewById(R.id.txtPrazo);
+        TextView txtStatus = (TextView) rowView.findViewById(R.id.txtStatus);
         txtNome.setText(list.get(position).getTitulo());
         txtPrazo.setText("Prazo: "+list.get(position).getPrazo());
+        if (list.get(position).getStatus() == 0){
+            txtStatus.setText("Status: em aberto.");
+        }
+        else {
+            txtStatus.setText("Status: concluída.");
+        }
+
         return rowView;
     }
 }

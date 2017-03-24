@@ -10,6 +10,12 @@
         android:id="@+id/txtNome" />
 
     <TextView
+        android:text="pontuação"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPontos" />
+
+    <TextView
         android:text="email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

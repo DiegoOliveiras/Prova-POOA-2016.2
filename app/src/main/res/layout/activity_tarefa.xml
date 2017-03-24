@@ -11,47 +11,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.diego.provapooa20162.activity.project.activity.ActivityTarefa">
 
-    <TextView
-        android:text="TÍTULO"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:id="@+id/txtTitulo"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="DESCRIÇÃO"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtDesc"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:lines="5"
-        android:maxLines="5"
-        android:minLines="5"
-        android:layout_marginTop="9dp"
-        android:layout_below="@+id/txtTitulo"
-        android:layout_alignStart="@+id/txtTitulo" />
-
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/edtObservacoes"
-        android:maxLines="5"
-        android:minLines="5"
-        android:hint="OBSERVAÇÕES"
-        android:lines="5"
-        android:layout_marginTop="11dp"
-        android:layout_below="@+id/txtDesc"
-        android:layout_alignStart="@+id/txtDesc" />
-
     <ImageButton
         android:layout_width="56dp"
         android:layout_height="60dp"
-        app:srcCompat="@drawable/error"
+        app:srcCompat="@drawable/minus"
         android:id="@+id/btnApagar"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -65,5 +28,85 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:scaleType="centerCrop" />
+
+    <TextView
+        android:text="TÍTULO"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:id="@+id/txtTitulo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="DATA INICIO"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDataInicio"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_below="@+id/txtDesc"
+        android:layout_alignStart="@+id/txtDesc" />
+
+    <TextView
+        android:text="DATA TERMINO"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDataTermino"
+        android:layout_below="@+id/edtObservacoes"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:text="PRAZO"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPrazo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_below="@+id/txtDataInicio"
+        android:layout_alignStart="@+id/txtDataInicio" />
+
+    <TextView
+        android:text="CONCLUIDO POR: NOME"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDataTermino"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtUsuario"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/edtObservacoes"
+        android:maxLines="5"
+        android:minLines="5"
+        android:hint="OBSERVAÇÕES"
+        android:lines="5"
+        android:layout_below="@+id/txtPrazo"
+        android:layout_alignStart="@+id/txtPrazo" />
+
+    <TextView
+        android:text="pontos"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtPontos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:text="DESCRIÇÃO"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDesc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:lines="5"
+        android:maxLines="5"
+        android:minLines="5"
+        android:layout_below="@+id/txtPontos"
+        android:layout_alignStart="@+id/txtPontos" />
 
 </RelativeLayout>
